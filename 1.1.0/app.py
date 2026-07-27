@@ -84,7 +84,6 @@ render_page_header(
 )
 
 mode1, mode2 = st.columns(2)
-mode3, mode4 = st.columns(2)
 
 with mode1:
 
@@ -134,46 +133,20 @@ one hidden factual mistake.
     ):
         st.switch_page("pages/2_Error_Hunt_Mode.py")
 
-with mode3:
+render_info_card(
+    "📊 Dashboard",
+    """
+Track your learning journey. • Previous sessions • Calibration graph • Weak concepts • Learning trends — **Best for:** Progress tracking
+    """,
+    "success",
+)
 
-    render_info_card(
-        "📊 Dashboard",
-        """
-Track your learning journey.
-
-• Previous sessions
-• Calibration graph
-• Weak concepts
-• Learning trends
-
-**Best for:** Progress tracking
-        """,
-        "success",
-    )
-
-    if st.button(
-        "Open Dashboard",
-        key="home_dashboard",
-        use_container_width=True,
-    ):
-        st.switch_page("pages/3_Dashboard.py")
-
-with mode4:
-
-    render_info_card(
-        "📚 Misconception Library",
-        """
-Browse common misconceptions
-across different topics.
-
-• Frequent mistakes
-• Correct explanations
-• Faster revision
-
-**Best for:** Quick review
-        """,
-        "info",
-    )
+if st.button(
+    "Open Dashboard",
+    key="home_dashboard",
+    use_container_width=True,
+):
+    st.switch_page("pages/3_Dashboard.py")
 
 st.divider()
 
