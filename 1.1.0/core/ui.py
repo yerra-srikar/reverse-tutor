@@ -97,10 +97,10 @@ def inject_base_css():
             .block-container{{ padding-top:2rem; padding-bottom:2rem; max-width:1200px; }}
             .hero{{
                 background:linear-gradient(135deg, #1E293B, #111827);
-                padding:40px; border-radius:22px; border:1px solid {BORDER}; margin-bottom:30px;
+                padding:20px 24px; border-radius:16px; border:1px solid {BORDER}; margin-bottom:16px;
             }}
-            .hero-title{{ font-size:48px; font-weight:800; margin-bottom:10px; }}
-            .hero-sub{{ font-size:18px; color:{SUBTEXT}; }}
+            .hero-title{{ font-size:26px; font-weight:800; margin-bottom:4px; }}
+            .hero-sub{{ font-size:14px; color:{SUBTEXT}; }}
             .card{{
                 background:{CARD}; border:1px solid {BORDER}; border-radius:18px;
                 padding:22px; margin-bottom:18px;
@@ -135,7 +135,7 @@ def inject_base_css():
 
 def render_page_header(title: str, subtitle: str = "", icon: str = ""):
     """Render a modern page hero/header."""
-    icon_html = f"<div style='font-size:58px;margin-bottom:12px;'>{icon}</div>" if icon else ""
+    icon_html = f"<div style='font-size:28px;margin-bottom:6px;'>{icon}</div>" if icon else ""
 
     st.markdown(
         f'<div class="hero">{icon_html}'
