@@ -226,13 +226,13 @@ Question every fact.
 
     )
 
-st.divider()
-# ==========================================================
-# EXPLANATION CARD
-# ==========================================================
-
 if st.session_state["eh_explanation"]:
 
+    st.divider()
+
+    # ==========================================================
+    # EXPLANATION CARD
+    # ==========================================================
     render_page_header(
         title="Find the Mistake",
         subtitle="Read carefully before making your guess.",
@@ -472,7 +472,5 @@ Ask yourself:
 # ==========================================================
 # FOOTER
 # ==========================================================
-
-st.divider()
 
 render_footer()
