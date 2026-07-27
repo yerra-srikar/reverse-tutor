@@ -44,16 +44,6 @@ def render_sidebar():
         st.page_link("pages/2_Error_Hunt_Mode.py", label="Error Hunt", icon="🔍")
         st.page_link("pages/3_Dashboard.py", label="Dashboard", icon="📊")
 
-        st.divider()
-        st.markdown("### System Status")
-
-        if os.getenv("GEMINI_API_KEY"):
-            render_info_card("Gemini Connected", "AI services are available.", "success")
-        else:
-            render_info_card("Gemini Missing", "Add GEMINI_API_KEY to enable AI.", "danger")
-
-        render_info_card("Database Ready", "SQLite initialized successfully.", "info")
-
 # ==========================================================
 # BASE CSS  (unchanged — this one already works)
 # ==========================================================
